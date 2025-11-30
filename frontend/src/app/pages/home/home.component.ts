@@ -15,20 +15,7 @@ import { ContactComponent } from '../../features/contact/contact.component';
     AppsComponent,
     ContactComponent
   ],
-  template: `
-    <main>
-      <app-hero></app-hero>
-      <app-portfolio></app-portfolio>
-      <app-blog></app-blog>
-      <app-apps></app-apps>
-      <app-contact></app-contact>
-    </main>
-  `,
-  styles: [`
-    main {
-      min-height: 100vh;
-      background: #0a0a0a;
-    }
-  `]
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent { }

@@ -1,0 +1,27 @@
+<div class="page-container">
+    <header class="page-header">
+        <h1 class="page-title">All Softwares</h1>
+        <p class="page-description">Check out all my live applications and software projects</p>
+    </header>
+
+    <div class="apps-grid" *ngIf="apps$ | async as apps">
+        <div class="app-card" *ngFor="let app of apps">
+            <div class="app-screenshot">
+                <img [src]="app.screenshot?.url || 'assets/placeholder.jpg'" [alt]="app.title">
+                <div class="app-status" [ngClass]="app.status.toLowerCase()">{{ app.status }}</div>
+            </div>
+            <div class="app-content">
+                <div class="app-header">
+                    <h3 class="app-title">{{ app.title }}</h3>
+                    <span class="app-category">{{ app.category }}</span>
+                </div>
+                <p class="app-description">{{ app.description }}</p>
+                <a [href]="app.liveUrl" target="_blank" class="btn btn-block btn-primary">Launch App</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a routerLink="/" class="btn-secondary">← Back to Home</a>
+    </div>
+</div>

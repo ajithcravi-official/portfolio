@@ -1,0 +1,33 @@
+<div class="page-container">
+    <header class="page-header">
+        <h1 class="page-title">All Projects</h1>
+        <p class="page-description">Explore my complete portfolio of projects</p>
+    </header>
+
+    <div class="projects-grid" *ngIf="projects$ | async as projects">
+        <div class="project-card" *ngFor="let project of projects">
+            <div class="project-image">
+                <img [src]="project.image?.url || 'assets/placeholder.jpg'" [alt]="project.title">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a [href]="project.projectUrl" target="_blank" class="btn btn-sm btn-primary"
+                            *ngIf="project.projectUrl">View Live</a>
+                        <a [href]="project.githubUrl" target="_blank" class="btn btn-sm btn-outline"
+                            *ngIf="project.githubUrl">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">{{ project.title }}</h3>
+                <p class="project-description">{{ project.description }}</p>
+                <div class="project-tags">
+                    <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a routerLink="/" class="btn-secondary">← Back to Home</a>
+    </div>
+</div>

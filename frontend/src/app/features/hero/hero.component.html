@@ -1,1 +1,17 @@
-<p>hero works!</p>
+<section id="home" class="hero" *ngIf="siteSettings$ | async as settings">
+    <div class="hero-content">
+        <h1 class="hero-title fade-in-up">{{ settings.heroTitle }}</h1>
+        <h2 class="hero-subtitle fade-in-up delay-1">{{ settings.heroSubtitle }}</h2>
+        <div class="hero-description fade-in-up delay-2">
+            <p>{{ settings.heroDescription }}</p>
+        </div>
+        <div class="hero-cta fade-in-up delay-3">
+            <a (click)="scrollToPortfolio()" class="btn btn-primary">View My Work</a>
+            <a (click)="scrollToContact()" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
+    <div class="hero-background">
+        <div class="gradient-sphere"></div>
+        <div class="grid-overlay"></div>
+    </div>
+</section>

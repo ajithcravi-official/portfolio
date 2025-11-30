@@ -1,1 +1,30 @@
-<p>portfolio works!</p>
+<section id="portfolio" class="section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid" *ngIf="projects$ | async as projects">
+            <div class="project-card" *ngFor="let project of projects.slice(0, 3)">
+                <div class="project-image">
+                    <img [src]="project.image?.url || 'assets/placeholder.jpg'" [alt]="project.title">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a [href]="project.projectUrl" target="_blank" class="btn btn-sm btn-primary"
+                                *ngIf="project.projectUrl">View Live</a>
+                            <a [href]="project.githubUrl" target="_blank" class="btn btn-sm btn-outline"
+                                *ngIf="project.githubUrl">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">{{ project.description }}</p>
+                    <div class="project-tags">
+                        <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a routerLink="/projects" class="btn-view-all">View All Projects →</a>
+        </div>
+    </div>
+</section>

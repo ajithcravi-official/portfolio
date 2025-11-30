@@ -1,1 +1,18 @@
-<p>navigation works!</p>
+<nav class="nav" [class.scrolled]="isScrolled">
+    <div class="nav-container">
+        <a (click)="scrollTo('home')" class="nav-logo">Ajith C Ravi</a>
+        <ul class="nav-menu" [class.active]="isMenuOpen">
+            <li><a (click)="scrollTo('home')" [class.active]="activeSection === 'home'" class="nav-link">Home</a></li>
+            <li><a (click)="scrollTo('portfolio')" [class.active]="activeSection === 'portfolio'"
+                    class="nav-link">Projects</a></li>
+            <li><a (click)="scrollTo('blog')" [class.active]="activeSection === 'blog'" class="nav-link">Blog</a></li>
+            <li><a (click)="scrollTo('apps')" [class.active]="activeSection === 'apps'" class="nav-link">Softwares</a>
+            </li>
+            <li><a (click)="scrollTo('contact')" [class.active]="activeSection === 'contact'"
+                    class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" (click)="toggleMenu()" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+    </div>
+</nav>

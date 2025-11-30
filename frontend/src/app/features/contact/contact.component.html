@@ -1,1 +1,17 @@
-<p>contact works!</p>
+<section id="contact" class="section" *ngIf="contact$ | async as contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-card">
+                <p class="contact-bio">{{ contact.bio }}</p>
+                <a [href]="'mailto:' + contact.email" class="email-link">{{ contact.email }}</a>
+                <div class="social-links">
+                    <a [href]="contact.github" target="_blank" class="social-link" *ngIf="contact.github">GitHub</a>
+                    <a [href]="contact.linkedin" target="_blank" class="social-link"
+                        *ngIf="contact.linkedin">LinkedIn</a>
+                    <a [href]="contact.twitter" target="_blank" class="social-link" *ngIf="contact.twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

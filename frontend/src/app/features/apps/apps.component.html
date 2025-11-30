@@ -1,1 +1,24 @@
-<p>apps works!</p>
+<section id="apps" class="section">
+    <div class="container">
+        <h2 class="section-title">Softwares</h2>
+        <div class="apps-grid" *ngIf="apps$ | async as apps">
+            <div class="app-card" *ngFor="let app of apps.slice(0, 3)">
+                <div class="app-screenshot">
+                    <img [src]="app.screenshot?.url || 'assets/placeholder.jpg'" [alt]="app.title">
+                    <div class="app-status" [ngClass]="app.status.toLowerCase()">{{ app.status }}</div>
+                </div>
+                <div class="app-content">
+                    <div class="app-header">
+                        <h3 class="app-title">{{ app.title }}</h3>
+                        <span class="app-category">{{ app.category }}</span>
+                    </div>
+                    <p class="app-description">{{ app.description }}</p>
+                    <a [href]="app.liveUrl" target="_blank" class="btn btn-block btn-primary">Launch App</a>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a routerLink="/softwares" class="btn-view-all">View All Softwares →</a>
+        </div>
+    </div>
+</section>

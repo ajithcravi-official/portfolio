@@ -1,42 +1,37 @@
-.section {
-    padding: 6rem 0;
-    background: #0f0f0f;
-    display: flex;
-    flex-direction: column;
-}
-
-.container {
+.page-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
+    padding: 8rem 2rem 4rem;
+    min-height: 100vh;
+    background: #0f0f0f;
 }
 
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+.page-header {
     text-align: center;
     margin-bottom: 4rem;
-    color: #fff;
-    position: relative;
+}
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: #d4af37;
-    }
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.page-description {
+    font-size: 1.2rem;
+    color: #aaa;
 }
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2.5rem;
-    padding: 0;
+    margin-bottom: 4rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .blog-card {
@@ -130,26 +125,24 @@
     }
 }
 
-.view-all {
+.back-link {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
-.btn-view-all {
+.btn-secondary {
     display: inline-block;
-    padding: 0.75rem 2.5rem;
+    padding: 0.75rem 2rem;
     background: transparent;
     color: #d4af37;
     border: 2px solid #d4af37;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
     transition: all 0.3s ease;
 
     &:hover {
         background: #d4af37;
         color: #000;
-        transform: translateY(-2px);
     }
 }
