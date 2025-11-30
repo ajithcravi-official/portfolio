@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elegant portfolio showcasing projects, blog posts, and live applications. Explore my work and connect with me.">
+    <meta name="keywords" content="portfolio, web developer, projects, blog, applications">
+    <meta name="author" content="Your Name">
+    <title>Portfolio | Elegant Showcase</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Portfolio</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
+                <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
+                <li><a href="#apps" class="nav-link" data-section="apps">Live Apps</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Welcome to my Portfolio</p>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Your Name</span>
+                </h1>
+                <p class="hero-description">
+                    A passionate developer crafting elegant digital experiences. 
+                    Specializing in building beautiful, functional, and user-centric applications.
+                </p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Portfolio</h2>
+                <p>A showcase of my latest projects and creative work</p>
+            </div>
+            
+            <div class="cards-grid">
+                <!-- Portfolio Card 1 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Project Dashboard">
+                    </div>
+                    <h3 class="card-title">Analytics Dashboard</h3>
+                    <div class="card-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                    <p class="card-description">
+                        A comprehensive analytics dashboard with real-time data visualization 
+                        and interactive charts for business intelligence.
+                    </p>
+                    <a href="#" class="card-link">View Project →</a>
+                </article>
+
+                <!-- Portfolio Card 2 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="E-commerce Platform">
+                    </div>
+                    <h3 class="card-title">E-Commerce Platform</h3>
+                    <div class="card-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Stripe</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <p class="card-description">
+                        Full-featured e-commerce solution with secure payments, 
+                        inventory management, and seamless user experience.
+                    </p>
+                    <a href="#" class="card-link">View Project →</a>
+                </article>
+
+                <!-- Portfolio Card 3 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" alt="Mobile App">
+                    </div>
+                    <h3 class="card-title">Fitness Tracker App</h3>
+                    <div class="card-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Health API</span>
+                    </div>
+                    <p class="card-description">
+                        Cross-platform mobile application for tracking workouts, 
+                        nutrition, and health metrics with AI-powered insights.
+                    </p>
+                    <a href="#" class="card-link">View Project →</a>
+                </article>
+
+                <!-- Portfolio Card 4 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="AI Tool">
+                    </div>
+                    <h3 class="card-title">AI Content Generator</h3>
+                    <div class="card-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">OpenAI</span>
+                        <span class="tag">FastAPI</span>
+                    </div>
+                    <p class="card-description">
+                        AI-powered content generation tool leveraging large language models 
+                        for marketing copy and creative writing.
+                    </p>
+                    <a href="#" class="card-link">View Project →</a>
+                </article>
+
+                <!-- Portfolio Card 5 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop" alt="Portfolio Website">
+                    </div>
+                    <h3 class="card-title">Portfolio CMS</h3>
+                    <div class="card-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Contentful</span>
+                        <span class="tag">Tailwind</span>
+                    </div>
+                    <p class="card-description">
+                        Headless CMS portfolio builder with drag-and-drop interface 
+                        and real-time preview capabilities.
+                    </p>
+                    <a href="#" class="card-link">View Project →</a>
+                </article>
+
+                <!-- Portfolio Card 6 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Data Visualization">
+                    </div>
+                    <h3 class="card-title">Data Visualization Suite</h3>
+                    <div class="card-tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Three.js</span>
+                        <span class="tag">WebGL</span>
+                    </div>
+                    <p class="card-description">
+                        Interactive 3D data visualization platform for complex datasets 
+                        with immersive exploration capabilities.
+                    </p>
+                    <a href="#" class="card-link">View Project →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Blog</h2>
+                <p>Thoughts, tutorials, and insights on web development</p>
+            </div>
+            
+            <div class="cards-grid">
+                <!-- Blog Post 1 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop" alt="Tech Blog Post">
+                    </div>
+                    <div class="card-meta">
+                        <span>📅 Nov 20, 2025</span>
+                        <span>⏱ 5 min read</span>
+                    </div>
+                    <h3 class="card-title">Modern Web Development Trends</h3>
+                    <p class="card-description">
+                        Exploring the latest trends in web development including AI integration, 
+                        micro-frontends, and the future of JavaScript frameworks.
+                    </p>
+                    <a href="#" class="card-link">Read More →</a>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Coding Tutorial">
+                    </div>
+                    <div class="card-meta">
+                        <span>📅 Nov 15, 2025</span>
+                        <span>⏱ 8 min read</span>
+                    </div>
+                    <h3 class="card-title">Building Scalable APIs</h3>
+                    <p class="card-description">
+                        A comprehensive guide to designing and implementing scalable REST APIs 
+                        with best practices for authentication and rate limiting.
+                    </p>
+                    <a href="#" class="card-link">Read More →</a>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop" alt="UI Design">
+                    </div>
+                    <div class="card-meta">
+                        <span>📅 Nov 10, 2025</span>
+                        <span>⏱ 6 min read</span>
+                    </div>
+                    <h3 class="card-title">The Art of UI Animation</h3>
+                    <p class="card-description">
+                        Learn how to create smooth, performant animations that enhance 
+                        user experience without compromising on performance.
+                    </p>
+                    <a href="#" class="card-link">Read More →</a>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop" alt="DevOps">
+                    </div>
+                    <div class="card-meta">
+                        <span>📅 Nov 5, 2025</span>
+                        <span>⏱ 10 min read</span>
+                    </div>
+                    <h3 class="card-title">CI/CD Pipeline Essentials</h3>
+                    <p class="card-description">
+                        Setting up automated deployment pipelines with GitHub Actions, 
+                        Docker, and Kubernetes for seamless delivery.
+                    </p>
+                    <a href="#" class="card-link">Read More →</a>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop" alt="JavaScript">
+                    </div>
+                    <div class="card-meta">
+                        <span>📅 Oct 28, 2025</span>
+                        <span>⏱ 7 min read</span>
+                    </div>
+                    <h3 class="card-title">Advanced TypeScript Patterns</h3>
+                    <p class="card-description">
+                        Deep dive into advanced TypeScript patterns including generics, 
+                        decorators, and utility types for better code quality.
+                    </p>
+                    <a href="#" class="card-link">Read More →</a>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1557853197-aefb550b6fdc?w=600&h=400&fit=crop" alt="Performance">
+                    </div>
+                    <div class="card-meta">
+                        <span>📅 Oct 20, 2025</span>
+                        <span>⏱ 9 min read</span>
+                    </div>
+                    <h3 class="card-title">Web Performance Optimization</h3>
+                    <p class="card-description">
+                        Techniques and strategies for optimizing web application performance 
+                        including lazy loading, code splitting, and caching.
+                    </p>
+                    <a href="#" class="card-link">Read More →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Applications Section -->
+    <section id="apps">
+        <div class="container">
+            <div class="section-title">
+                <h2>Live Applications</h2>
+                <p>Explore my deployed projects in action</p>
+            </div>
+            
+            <div class="cards-grid">
+                <!-- App 1 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" alt="Task Manager">
+                    </div>
+                    <h3 class="card-title">TaskFlow Pro</h3>
+                    <div class="card-tags">
+                        <span class="tag">🚀 Live</span>
+                        <span class="tag">SaaS</span>
+                    </div>
+                    <p class="card-description">
+                        Advanced task management platform with team collaboration, 
+                        real-time updates, and powerful analytics.
+                    </p>
+                    <a href="#" class="card-link" target="_blank" rel="noopener">Launch App →</a>
+                </article>
+
+                <!-- App 2 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop" alt="Chat Application">
+                    </div>
+                    <h3 class="card-title">ChatConnect</h3>
+                    <div class="card-tags">
+                        <span class="tag">🚀 Live</span>
+                        <span class="tag">Real-time</span>
+                    </div>
+                    <p class="card-description">
+                        Secure messaging platform with end-to-end encryption, 
+                        video calls, and file sharing capabilities.
+                    </p>
+                    <a href="#" class="card-link" target="_blank" rel="noopener">Launch App →</a>
+                </article>
+
+                <!-- App 3 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Code Editor">
+                    </div>
+                    <h3 class="card-title">CodePen Clone</h3>
+                    <div class="card-tags">
+                        <span class="tag">🚀 Live</span>
+                        <span class="tag">Editor</span>
+                    </div>
+                    <p class="card-description">
+                        Online code editor with live preview, syntax highlighting, 
+                        and collaborative coding features.
+                    </p>
+                    <a href="#" class="card-link" target="_blank" rel="noopener">Launch App →</a>
+                </article>
+
+                <!-- App 4 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="Weather App">
+                    </div>
+                    <h3 class="card-title">Weather Pro</h3>
+                    <div class="card-tags">
+                        <span class="tag">🚀 Live</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <p class="card-description">
+                        Beautiful weather application with detailed forecasts, 
+                        radar maps, and personalized weather alerts.
+                    </p>
+                    <a href="#" class="card-link" target="_blank" rel="noopener">Launch App →</a>
+                </article>
+
+                <!-- App 5 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" alt="Finance App">
+                    </div>
+                    <h3 class="card-title">Budget Tracker</h3>
+                    <div class="card-tags">
+                        <span class="tag">🚀 Live</span>
+                        <span class="tag">Finance</span>
+                    </div>
+                    <p class="card-description">
+                        Personal finance manager with expense tracking, 
+                        budgeting tools, and financial insights.
+                    </p>
+                    <a href="#" class="card-link" target="_blank" rel="noopener">Launch App →</a>
+                </article>
+
+                <!-- App 6 -->
+                <article class="card fade-in">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&h=400&fit=crop" alt="Music Player">
+                    </div>
+                    <h3 class="card-title">MusicStream</h3>
+                    <div class="card-tags">
+                        <span class="tag">🚀 Live</span>
+                        <span class="tag">Media</span>
+                    </div>
+                    <p class="card-description">
+                        Modern music streaming platform with playlists, 
+                        recommendations, and high-quality audio playback.
+                    </p>
+                    <a href="#" class="card-link" target="_blank" rel="noopener">Launch App →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-title">
+                    <h2>Let's Connect</h2>
+                    <p>I'm always open to new opportunities and collaborations</p>
+                </div>
+                
+                <p class="hero-description mb-2">
+                    Whether you have a project in mind, want to discuss collaboration opportunities, 
+                    or just want to say hello, feel free to reach out!
+                </p>
+
+                <div class="social-links">
+                    <a href="https://github.com" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.840 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="social-link" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mt-3">
+                    <a href="mailto:your.email@example.com" class="btn btn-primary">Send me an email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name. Crafted with passion and code.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

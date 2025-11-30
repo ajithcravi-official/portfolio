@@ -1,0 +1,48 @@
+<!-- Scroll Progress Indicator -->
+<div class="scroll-progress"></div>
+
+<div class="container" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+  <div class="text-center fade-in">
+    <p class="text-gold"
+      style="font-size: 1rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;">
+      Your Portfolio Is Ready
+    </p>
+    <h1 style="margin-bottom: 2rem;">
+      Elegant <span class="text-gold">Portfolio</span>
+    </h1>
+    <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.25rem;">
+      Your Angular 18 + Strapi 5 portfolio is successfully set up with a premium black, white, and gold design system.
+    </p>
+
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+      <a href="http://localhost:1337/admin" target="_blank" class="btn btn-primary">
+        Open Strapi Admin
+      </a>
+      <a href="/README.md" class="btn btn-secondary">
+        View Documentation
+      </a>
+    </div>
+
+    <div
+      style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 2rem; max-width: 700px; margin: 0 auto;">
+      <h3 style="color: #d4af37; margin-bottom: 1.5rem;">Next Steps</h3>
+      <div style="text-align: left;">
+        <ol style="color: #cccccc; line-height: 2; padding-left: 1.5rem;">
+          <li>Create content types in Strapi (see QUICKSTART.md)</li>
+          <li>Set API permissions to public</li>
+          <li>Add your portfolio content</li>
+          <li>Customize Angular components</li>
+          <li>Deploy your portfolio!</li>
+        </ol>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <p style="font-size: 0.875rem; color: #888888;">
+        🚀 Built with Angular {{ title }} and Strapi 5
+      </p>
+    </div>
+  </div>
+</div>
+
+<router-outlet />

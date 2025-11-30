@@ -1,0 +1,291 @@
+/* ============================================
+   ELEGANT PORTFOLIO - GLOBAL STYLES
+   Black, White & Gold Color Palette
+   ============================================ */
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap');
+
+// Import design system
+@import 'styles/variables';
+@import 'styles/mixins';
+@import 'styles/animations';
+
+/* === Global Reset & Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $font-body;
+    background-color: $color-black;
+    color: $color-white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* === Typography === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-heading;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: $spacing-sm;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    margin-bottom: $spacing-sm;
+    color: $color-gray-light;
+}
+
+a {
+    color: $color-gold;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+        color: $color-gold-light;
+    }
+}
+
+/* === Container === */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+section {
+    min-height: 100vh;
+    padding: $spacing-xl 0;
+    display: flex;
+    align-items: center;
+}
+
+/* === Section Title === */
+.section-title {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, $color-gold, $color-gold-light);
+        margin: $spacing-sm auto 0;
+        border-radius: 2px;
+    }
+}
+
+/* === Buttons === */
+.btn {
+    padding: 1rem 2rem;
+    border-radius: $radius-sm;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all $transition-normal;
+    border: 2px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &.btn-primary {
+        background: $color-gold;
+        color: $color-black;
+        border-color: $color-gold;
+
+        &:hover {
+            background: $color-gold-dark;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+    }
+
+    &.btn-secondary {
+        background: transparent;
+        color: $color-white;
+        border-color: $color-white;
+
+        &:hover {
+            background: $color-white;
+            color: $color-black;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+/* === Cards === */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+    margin-top: $spacing-lg;
+}
+
+.card {
+    @include glass-morphism;
+    border-radius: $radius-md;
+    padding: $spacing-md;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, $color-gold, $color-gold-light);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform $transition-normal;
+    }
+
+    @include card-hover;
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background: $color-black-soft;
+    border-radius: $radius-sm;
+    margin-bottom: $spacing-sm;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform $transition-slow;
+    }
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: $color-white;
+    margin-bottom: $spacing-xs;
+}
+
+.card-description {
+    color: $color-gray-light;
+    margin-bottom: $spacing-sm;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid $color-gold;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: $color-gold;
+    display: inline-block;
+    margin-right: $spacing-xs;
+    margin-bottom: $spacing-xs;
+}
+
+/* === Scroll Progress === */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $color-gold, $color-gold-light);
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* === Utility Classes === */
+.text-center {
+    text-align: center;
+}
+
+.text-gold {
+    color: $color-gold;
+}
+
+.mt-1 {
+    margin-top: $spacing-sm;
+}
+
+.mt-2 {
+    margin-top: $spacing-md;
+}
+
+.mt-3 {
+    margin-top: $spacing-lg;
+}
+
+.mb-1 {
+    margin-bottom: $spacing-sm;
+}
+
+.mb-2 {
+    margin-bottom: $spacing-md;
+}
+
+.mb-3 {
+    margin-bottom: $spacing-lg;
+}
+
+/* === Responsive Design === */
+@include tablet {
+    section {
+        padding: $spacing-lg 0;
+    }
+
+    .container {
+        padding: 0 $spacing-sm;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include mobile {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+}
